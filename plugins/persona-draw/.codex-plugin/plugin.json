@@ -8,7 +8,7 @@
     "capabilities": []
   },
   "name": "persona-draw",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "每次对话独立抽取 AI 同人人设和脾气，也可点名、混搭和调整梗浓度。",
   "keywords": [],
   "skills": "./skills"

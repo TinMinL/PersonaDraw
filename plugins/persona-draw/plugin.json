@@ -6,10 +6,10 @@
       "interface": {
         "defaultPrompt": "暗抽本场人设和脾气，自然接我的话。",
         "displayName": "会话人设签",
-        "shortDescription": "三位 AI 同人角色，抽签或点名"
+        "shortDescription": "四位 AI 同人角色，抽签或点名"
       }
     }
   },
   "name": "persona-draw",
-  "version": "0.1.5"
+  "version": "0.2.0"
 }

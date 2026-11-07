@@ -2,6 +2,10 @@
 
 版本按新到旧排列。检查更新时，读取 [main 分支插件清单](plugins/persona-draw/plugin.json) 的 `version`，与已安装清单中的语义版本比较。个人导入的副本、手动复制的 skill 需要单独更新；单文件安装若未记录版本，可直接比较技能正文。
 
+## 0.3.1 · 2026-11-08
+
+- 角色形象统一采用 [Gender Swap AI 图鉴](https://genderswapai.com/zh-CN/ai-gijinka) 的 ZipZipPipe 版本。四份角色档案已链接到绘图规则中，补全 GPT 的龙翼与白金礼服、Claude 的层叠裙装，并明确 DeepSeek 的黑白女仆裙与 Gemini 的异色瞳。[下载 v0.3.1](dist/persona-draw-0.3.1.zip)
+
 ## 0.3.0 · 2026-11-07
 
 - 亮签新增「角色形象」入口，可选每个对话、偶尔或不生成。首次未设置时询问，用户忽略也能继续聊天；同一聊天反复亮签只做一次自动出图决定。

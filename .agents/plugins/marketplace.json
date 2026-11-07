@@ -1,0 +1,17 @@
+{
+  "name": "persona-draw-market",
+  "plugins": [
+    {
+      "name": "persona-draw",
+      "source": {
+        "source": "local",
+        "path": "./plugins/persona-draw"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Other"
+    }
+  ]
+}

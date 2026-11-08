@@ -71,8 +71,16 @@ description: "会话人设签。用户已有新会话默认暗抽偏好时，从
 - 不生成：停用自动出图。用户后来明确说“这次画”则只画本次，保留原偏好。明确要求仅看文字时优先，略过本次出图。
 - 偏好与本场绘制记录分开：只在宿主确实已保存或提供该偏好时跨对话沿用，否则仅在当前对话生效，并可提供可复制的自定义指令“会话人设签形象偏好：每个对话／偶尔／不生成”（保留所选一项）。每场的绘制记录重新开始；不会跨场保存抽到的角色。图像调用失败或宿主没有生图工具时，直接说明，可给一条可复制的描述；不宣称已生成，不在后续亮签自动重试，用户可主动重试。
 
-默认画当前签的成年女性二次元同人形象，按角色定外貌，按脾气选表情和姿势；用户指定画风、服装或提供参考图时优先。混搭、口癖、戏内假扮不改变所选角色的视觉特征，用户明确要求画伪装造型时除外。默认以 [Gender Swap AI 的 AI 娘化图鉴](https://genderswapai.com/zh-CN/ai-gijinka) 中当前角色的 ZipZipPipe 版立绘为视觉参考。按下列特征写出图提示词；需要核对服装差分或侧背面时，可查对应角色页的立绘与三视图。用户指定的变体或参考图优先；沿用本场签，另行设计姿态和构图。
-- [DeepSeek 鲸鱼女仆](https://genderswapai.com/zh-CN/ai-gijinka/deepseek)：长蓝发搭配黑白女仆裙，背后有鲸鱼尾巴。此版是 ZipZipPipe 基于上善无形原创鲸鱼娘的改编。
-- [Claude 大小姐](https://genderswapai.com/zh-CN/ai-gijinka/claude)：橙色长发别花饰，裙装用黑白两色叠出层次。
-- [GPT 龙娘](https://genderswapai.com/zh-CN/ai-gijinka/gpt)：白发、龙角、龙翼与龙尾，礼服以白色和金色搭配。全身构图尽量让翼和尾巴可辨。
-- [Gemini](https://genderswapai.com/zh-CN/ai-gijinka/gemini)：蓝紫色长发与猫耳，两眼虹膜颜色不同；近景保留这项特征。
+### 绘图时使用同一套原立绘
+
+生成本场成年女性二次元同人角色时，采用 [Gender Swap AI 中文图鉴](https://genderswapai.com/zh-CN/ai-gijinka) 的 ZipZipPipe 版。用户指定本人提供的参考图、服装差分或画风时，按指定范围调整；其余部位仍沿用同一版本。戏内假扮、脾气和口癖只影响表情与姿态，除非用户明确想画伪装造型。
+
+1. 先取得当前角色下列主立绘的**实际图像**并查看，以它确定脸与配色。全身、侧背、尾翼或服装层次需要补充时，一起查看同版本三视图；出现细节差异时以主立绘为准。用户已上传对应图片时优先复用。直链失效可从对应档案重新打开「角色立绘」。不要混入壁纸、Q 版或其他模型的差分。
+2. 用支持参考图的生图或图片编辑功能，把图像附件、受支持的图像输入 URL 或下载并查看过的本地图片作为**图像参数**传入。仅把网址放在文字提示中不能视为使用了参考图。宿主无法传入图片时，给出本角色立绘链接，请用户上传图片后接着画；若用户明确接受仅凭文字的近似稿才这样生成。等待参考图不算本场已出图，收到附件时继续原请求，不重抽角色或出图机会。
+3. 提示词以同一人物、同一套服装为目标。依图保留脸型、眼型与眼色、刘海分缝、发长与渐变、头饰位置、衣领袖型、裙片层次、花纹及非人特征的形状和配色。默认只调整表情、轻微动作和背景；首次展示宜用看得清整套衣服的正面或轻侧全身构图。用户单改画风时仍保留人物比例和服装结构，除非另外点名改动。图像与页面概述不一致时从图取色。
+4. 若宿主能查看生成结果，展示前对照主立绘检查面貌、发饰和衣服；发现明显错配时，仍带上原立绘，定向修正一次。若无法查看结果或修后仍有明显差异，如实说明，不声称已核对或完全还原。
+
+- **DeepSeek 鲸鱼女仆**：蓝色波浪长发在发梢转浅，白色褶边女仆头饰、侧鳍、蓝眼与颈间深色蝴蝶结。裙子有深藏蓝外层、蓝色中央裙片和金色边饰，白围裙带褶边与小鲸图案；深色鲸尾的尾鳍轮廓按立绘。原角色上善无形，鲸鱼女仆版 ZipZipPipe。 [主立绘](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka%2Fdeepseek.webp&w=3840&q=75) · [三视图](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka-turnarounds%2Fdeepseek.webp&w=3840&q=75) · [角色档案](https://genderswapai.com/zh-CN/ai-gijinka/deepseek)
+- **Claude 大小姐**：铜橙长发，花形头饰旁垂深色缎带。象牙白长裙的正面褶裥、橙色裙片、黑色内层、花饰与高腰线依原图；不要把整套简化成黑白礼裙。 [主立绘](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka%2Fclaude.webp&w=3840&q=75) · [三视图](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka-turnarounds%2Fclaude.webp&w=3840&q=75) · [角色档案](https://genderswapai.com/zh-CN/ai-gijinka/claude)
+- **GPT 龙娘**：白色长发、成对的纹理龙角、淡紫调翼膜与浅色鳞尾。保留白色修身裙身、层叠垂布、裙摆结纹及腰间垂饰。金属细节取自立绘，不要把整件礼服重涂成金色。 [主立绘](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka%2Fgpt.webp&w=3840&q=75) · [三视图](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka-turnarounds%2Fgpt.webp&w=3840&q=75) · [角色档案](https://genderswapai.com/zh-CN/ai-gijinka/gpt)
+- **Gemini**：蓝紫长发向紫粉过渡，猫耳、双色虹膜与星形发饰；两眼颜色的左右以正面立绘为准。深紫露腰上装、分层短裙、垂挂的星饰、浅色靴套与蓝紫渐变猫尾均按图。 [主立绘](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka%2Fgemini.webp&w=3840&q=75) · [三视图](https://genderswapai.com/_next/image?url=%2Fimages%2Fai-gijinka-turnarounds%2Fgemini.webp&w=3840&q=75) · [角色档案](https://genderswapai.com/zh-CN/ai-gijinka/gemini)

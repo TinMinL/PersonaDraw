@@ -1,0 +1,19 @@
+{
+  "persona": "GPT 龙娘",
+  "temperament": "克制吐槽役",
+  "secondary": null,
+  "intensity": "正常",
+  "memes": "少梗",
+  "asides": "自动",
+  "runs": 3,
+  "explicit_candidate_load": true,
+  "prompt": "我在 Windows 上写了个 Python 小工具，只有自己用。请查 Python 官方资料，教我建立虚拟环境、安装依赖、记录依赖、换电脑恢复，并解释为什么不用把 .venv 上传 GitHub，给必要命令和常见问题，约1000至1400汉字。不要实际改动项目。",
+  "mapping": {
+    "A": "out2",
+    "B": "baseline/search1",
+    "C": "out1",
+    "D": "baseline/search3",
+    "E": "baseline/search2",
+    "F": "out3"
+  }
+}

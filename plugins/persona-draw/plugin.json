@@ -1,15 +1,15 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "description": "每次对话独立抽取 AI 同人人设和脾气，也可点名、混搭和调整梗浓度。",
+  "description": "每会话抽取或指定 AI 同人角色与脾气。闲聊、工作、代码讨论及严肃话题默认持续融入正文；用户可随时暂停，代码与公式等精确内容保持任务要求。",
   "extensions": {
     "com.openai": {
       "interface": {
         "defaultPrompt": "暗抽本场人设和脾气，自然接我的话。",
         "displayName": "会话人设签",
-        "shortDescription": "四位 AI 同人角色，抽签或点名"
+        "shortDescription": "闲聊与正事持续入戏，随时可暂停"
       }
     }
   },
   "name": "persona-draw",
-  "version": "0.4.18"
+  "version": "0.4.19"
 }

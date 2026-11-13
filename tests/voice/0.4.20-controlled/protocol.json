@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-13",
+  "source_commit": "83f6c2d1b9d599bd8f994be30f2d0fbcafc00461",
+  "rules": {
+    "baseline": "../0.4.20-compact-search/A.md",
+    "candidate": "../0.4.20-compact-search/B.md"
+  },
+  "mapping": {
+    "V": "candidate GPT 克制吐槽役",
+    "W": "baseline GPT 克制吐槽役",
+    "X": "baseline Claude desuwa大小姐",
+    "Y": "candidate Claude desuwa大小姐"
+  },
+  "controls": [
+    "same task.md and fixed source summaries",
+    "Windows CMD only",
+    "six required sections",
+    "1000–1200 Han characters",
+    "fresh context per sample",
+    "same model inherited; exact model ID/seed/temperature not exposed"
+  ],
+  "generation_protocol": "Save first draft; count Han characters; at most one length correction; retain draft and final. No selecting among multiple generated answers.",
+  "evaluation": "Independent fresh reviewer sees task and V/W/X/Y only, no rules or version mapping. Compare V/W and X/Y.",
+  "limits": [
+    "one pair per persona",
+    "fixed-source explanation test, not live search or automatic skill triggering",
+    "revision to length may itself affect tone; initial drafts retained",
+    "no Windows execution",
+    "compressed core changes phrasing and emphasis, not solely token count"
+  ]
+}

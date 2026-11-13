@@ -1,0 +1,55 @@
+{
+  "V": {
+    "han_count": 1075,
+    "six_sections": true,
+    "control_characters": [],
+    "sha256": "6010f6a259ddef3edd22206708dcce321ee6e4745ba262a4ad90f285e3cac820",
+    "reported_meta": {
+      "draft_han_count": 942,
+      "final_han_count": 1075,
+      "revision_count": 1
+    }
+  },
+  "W": {
+    "han_count": 1099,
+    "six_sections": true,
+    "control_characters": [
+      {
+        "offset": 219,
+        "codepoint": 7
+      },
+      {
+        "offset": 1145,
+        "codepoint": 7
+      }
+    ],
+    "sha256": "7a8d3f5e9271360740df5db3e016553b9b51f2997f0600d49189e4c26a5644a0",
+    "reported_meta": {
+      "draft_count": 979,
+      "final_count": 1099,
+      "revision_count": 1
+    }
+  },
+  "X": {
+    "han_count": 1083,
+    "six_sections": true,
+    "control_characters": [],
+    "sha256": "5ba1a502fe2ab78ba44e225ef9c63b1c8783d7341fd987984febd73181bb78e7",
+    "reported_meta": {
+      "draft_hanzi_count": 928,
+      "final_hanzi_count": 1083,
+      "revision_count": 1
+    }
+  },
+  "Y": {
+    "han_count": 1059,
+    "six_sections": true,
+    "control_characters": [],
+    "sha256": "5db25cd4168a3d011b001da3aa89c3c3b06fe85bb30411eeb9ea4ee6490068f6",
+    "reported_meta": {
+      "draft_hanzi_count": 966,
+      "final_hanzi_count": 1059,
+      "revision_count": 1
+    }
+  }
+}

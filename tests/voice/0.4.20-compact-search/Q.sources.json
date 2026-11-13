@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "url": "https://docs.python.org/3/library/venv.html",
+      "fact_check_scope": ["venv创建与默认隔离", "Windows PowerShell和CMD激活命令", "无需激活即可直接运行环境解释器", "环境不可移植、绝对路径、不纳入版本控制", "环境可删除重建、项目代码不应存放其中"]
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/venv.html",
+      "fact_check_scope": ["环境使用创建它的Python版本", "pip安装、freeze与requirements恢复", "requirements.txt提交版本控制", "deactivate退出环境"]
+    },
+    {
+      "url": "https://pip.pypa.io/en/stable/cli/pip_freeze/",
+      "fact_check_scope": ["freeze报告已安装内容而非源码依赖分析", "freeze不是锁文件", "默认省略部分引导工具"]
+    }
+  ],
+  "verification_method": "先使用搜索引擎2定位Python官方资料，再用搜索引擎1核验版本控制和freeze边界，并打开Python官方教程全文。",
+  "scope_notes": "没有运行用户项目或修改项目。PowerShell显式UTF-8输出、Git忽略文件、版本和架构迁移检查为实践性指导，未声称通过实际Windows执行验证。"
+}

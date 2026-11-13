@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "url": "https://docs.python.org/3/library/venv.html",
+      "citation_ref": "turn7view0",
+      "fact_check_scope": ["默认包隔离与创建环境", "Windows cmd及PowerShell激活命令", "直接调用解释器无需激活", "sys.executable检查与激活PATH机制", "环境不应纳入Git、非便携、应重建", "deactivate退出"]
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/venv.html",
+      "citation_ref": "turn7view1",
+      "fact_check_scope": ["venv沿用创建它的Python版本", "python -m pip安装与show", "freeze记录requirements.txt", "install -r恢复", "依赖清单纳入版本控制"]
+    },
+    {
+      "url": "https://pip.pypa.io/en/stable/cli/pip_freeze/",
+      "citation_ref": "turn7view2",
+      "fact_check_scope": ["freeze输出已安装包而非分析源码", "freeze不是锁文件或求解结果", "默认省略部分引导工具"]
+    }
+  ],
+  "notes": "仅查阅官方Python及pip文档；未操作用户项目。README记录运行条件、恢复后运行功能为基于文档的实践建议。"
+}

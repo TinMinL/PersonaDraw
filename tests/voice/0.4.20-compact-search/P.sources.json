@@ -1,0 +1,11 @@
+{
+  "sources": [
+    {"url":"https://docs.python.org/3/library/venv.html","reference":"turn0view0","fact_check_scope":["venv 创建、Windows 激活命令、解释器路径与隔离","激活非必需，可以直接调用解释器","环境不应纳入 Git，含绝对路径、不适合搬运，应在新位置重建","deactivate"]},
+    {"url":"https://docs.python.org/3/tutorial/venv.html","reference":"turn0view1","fact_check_scope":["依赖隔离动机","创建环境继承 Python 版本","pip 安装、freeze 和 install -r 恢复流程"]},
+    {"url":"https://pip.pypa.io/en/stable/cli/pip_freeze/","reference":"turn0view2","fact_check_scope":["freeze 输出已安装包，不扫描项目导入","freeze 不是锁文件或求解结果","freeze 默认省略部分引导工具，因此并非整个机器快照"]},
+    {"url":"https://github.com/pypa/packaging.python.org/blob/main/source/guides/installing-using-pip-and-virtual-environments.rst","reference":"turn1search0","fact_check_scope":["Windows py -m venv","忽略虚拟环境目录","激活后检查解释器位置，重开终端需要再次激活"]},
+    {"url":"https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/?sid=O4RZkw","reference":"turn1search1","fact_check_scope":["pip 安装 requests 示例及间接依赖","pip --version 检查路径"]}
+  ],
+  "editorial_guidance": ["推荐新电脑匹配旧环境的 Python 大小版本、操作系统和架构以减少兼容风险，不保证完全复现", "README 记录版本、入口、配置和外部程序是基于环境恢复边界给出的操作建议", "正文导出命令明确限定 cmd，避免将其无条件套用到旧 PowerShell 的重定向编码行为"],
+  "project_modified": false
+}

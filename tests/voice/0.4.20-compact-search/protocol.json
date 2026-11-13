@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "source_commit": "b41d45bdf34c0ecebd25aa0787295f13591c15ec",
+  "method": "fresh subagents, explicit rule load, live official-document searches; one answer per fresh agent",
+  "same_parent_model": true,
+  "model_exact_id": "not exposed in run metadata",
+  "baseline": "A.md",
+  "candidate": "B.md",
+  "mapping": {
+    "P": "baseline GPT 克制吐槽役 run1",
+    "Q": "candidate GPT 克制吐槽役 run1",
+    "R": "candidate Claude desuwa大小姐 run1",
+    "S": "baseline Claude desuwa大小姐 run1",
+    "T": "baseline GPT 克制吐槽役 run2",
+    "U": "candidate GPT 克制吐槽役 run2"
+  },
+  "settings": {
+    "intensity": "正常",
+    "memes": "少梗",
+    "asides": "自动",
+    "secondary": null
+  },
+  "prompt": "我在 Windows 上写了个 Python 小工具，只有自己用。请查 Python 官方资料，教我建立虚拟环境、安装依赖、记录依赖、换电脑恢复，并解释为什么不用把 .venv 上传 GitHub，给必要命令和常见问题，约1000至1400汉字。不要实际改动项目。",
+  "review": "fresh evaluator, P/Q T/U R/S paired comparison; version mapping and source rules withheld; filenames do not identify version",
+  "limitations": [
+    "not mobile or automatic activation test",
+    "not Windows execution",
+    "uncontrolled search results and chosen shell",
+    "only two GPT repeats and one Claude pair",
+    "no exact random seeds or temperature available"
+  ],
+  "samples": {
+    "P": {
+      "sha256": "51d8d0d8ca9e0db1aeeb5dd7b8709cda6b4a059355f8ee03a01c3eacaf4d6d06",
+      "han_char_count_raw": 763
+    },
+    "Q": {
+      "sha256": "794288d4186e1fdcdc59e4164cea52b78305088276822d4d6ac22531e75713af",
+      "han_char_count_raw": 793
+    },
+    "R": {
+      "sha256": "7bb545097f528a58c9070ecdd96c13b7db032a40a0554e33309468cd5ecdfa47",
+      "han_char_count_raw": 808
+    },
+    "S": {
+      "sha256": "b88488773a54667faeb156e1f760bad98acc7ceec85a2535d603a27cc9aff137",
+      "han_char_count_raw": 844
+    },
+    "T": {
+      "sha256": "397e2ce168bea08ed0146d1ac43ff7cb024eea78028976a5c711a86779853445",
+      "han_char_count_raw": 832
+    },
+    "U": {
+      "sha256": "14eb90045b2b465a3788e7bb1d3542918573fe63dc68ebe67c65ead54a914a46",
+      "han_char_count_raw": 1052
+    }
+  },
+  "length_result": "5 of 6 below requested 1000 Han characters; U meets range. No repair/retry was used to select favorable outputs."
+}

@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "url": "https://docs.python.org/3/library/venv.html",
+      "citation_ref": "turn6view0",
+      "checked_scope": ["虚拟环境隔离与创建命令", "Windows PowerShell 和 CMD 激活命令", "可直接调用环境内解释器而无需激活", "虚拟环境不应提交版本控制且通常不可移动", "绝对路径导致可移植性限制", "deactivate 退出", "Python 3.13 起自动生成 Git 忽略文件，正文仍给显式根目录规则"]
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/venv.html",
+      "citation_ref": "turn6view1",
+      "checked_scope": ["python -m pip 安装与指定版本", "pip list", "pip freeze 生成 requirements.txt", "pip install -r requirements.txt 恢复", "requirements.txt 可以纳入版本控制"]
+    },
+    {
+      "url": "https://pip.pypa.io/en/stable/cli/pip_freeze/",
+      "citation_ref": "turn6view2",
+      "checked_scope": ["freeze 输出已安装包而非源码依赖分析", "freeze 不是锁文件或依赖求解结果", "默认排除部分引导工具，因此正文未称完整系统快照"]
+    }
+  ],
+  "editorial_guidance": ["以单人 Windows 小工具为前提，选择 venv 加 pip 加 requirements.txt", "PowerShell 用 Set-Content -Encoding utf8 输出", "建议记录 Python 版本并实跑恢复结果", "Git 忽略规则不追溯取消已跟踪文件", "未实际运行示例命令或修改用户项目"]
+}

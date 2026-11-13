@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {"url": "https://docs.python.org/3/library/venv.html", "checked_facts": ["Windows PowerShell and CMD activation commands", "activation optional and direct interpreter invocation", "venv disposable, not committed to Git, nonportable absolute paths", "deactivate and environment interpreter"]},
+    {"url": "https://docs.python.org/3/tutorial/venv.html", "checked_facts": ["python -m pip install and list", "freeze requirements file and install -r", "venv uses creating interpreter version"]},
+    {"url": "https://pip.pypa.io/en/stable/cli/pip_freeze/", "checked_facts": ["freeze reports installed packages rather than calculating a lockfile", "default exclusions for packaging tools"]},
+    {"url": "https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/", "checked_facts": ["Windows py -m venv .venv", "project package isolation", "official Python installation prerequisite"]}
+  ],
+  "verification_limits": "Commands are instructional and were not run against the user's Windows project. UTF-8 Out-File syntax and Git ignore patterns are practical guidance; no project files were read or modified."
+}

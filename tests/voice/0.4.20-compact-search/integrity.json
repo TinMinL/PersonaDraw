@@ -1,0 +1,8 @@
+{
+  "baseline_sha256": "5ab79ebae2f7701cb95666ae9f48d679ae2aceeee3c70ec25df34a28e3af1b78",
+  "candidate_sha256": "5615dd9edbab700909b56918e425f6453f35dcd12057ae1e3e974bec1dc63c81",
+  "baseline_section_chars": 3931,
+  "candidate_section_chars": 781,
+  "outside_section_identical": true,
+  "candidate_not_installed": true
+}

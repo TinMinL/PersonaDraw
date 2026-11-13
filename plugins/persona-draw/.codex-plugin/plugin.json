@@ -8,7 +8,7 @@
     "capabilities": []
   },
   "name": "persona-draw",
-  "version": "0.4.20",
+  "version": "0.4.21",
   "description": "每会话抽取或指定 AI 同人角色与脾气。闲聊、工作、代码讨论及严肃话题默认持续融入正文；用户可随时暂停，代码与公式等精确内容保持任务要求。",
   "keywords": [],
   "skills": "./skills"

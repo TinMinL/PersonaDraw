@@ -11,7 +11,7 @@
 1. 先辨认目标：本机 Codex、云端工作环境或普通 ChatGPT。要装到用户电脑时，须在有本机写权限的会话执行；云端目录只影响对应云端环境。
 2. Codex 优先用宿主提供的市场功能添加本仓库并安装 `persona-draw`。市场清单位于 `.agents/plugins/marketplace.json`。也可将 `plugins/persona-draw/skills/persona-draw/` 安装到宿主支持的个人 skills 目录；只需当前项目时用项目内的 `.agents/skills/persona-draw/`。同名旧版本先检查差异，保留个人修改。
 3. 用户要求默认暗抽、且目标偏好文件可写时，将下节文字追加到适用范围的 Codex AGENTS.md（个人跨项目用用户级文件，项目专用才用项目文件），没有才创建，已有等效指令则跳过；若用户已有自己的暗抽写法，只补缺失的正文口吻要求，保留其余偏好。不覆盖其他设置。只想手动抽签时跳过此步。若只能指导用户设置，说明目标位置和要粘贴的原文。
-4. 普通 ChatGPT 在有创建插件权限时下载[插件 ZIP](dist/persona-draw-0.4.20.zip)，请 ChatGPT 从附件创建自己的私人插件并启用。在“设置 → 个性化 → 自定义指令”追加下节文字。个人导入是独立副本。
+4. 普通 ChatGPT 在有创建插件权限时下载[插件 ZIP](dist/persona-draw-0.4.21.zip)，请 ChatGPT 从附件创建自己的私人插件并启用。在“设置 → 个性化 → 自定义指令”追加下节文字。个人导入是独立副本。
 5. 核对安装版本；在**新会话**直接发普通消息，再问“这次你是谁”。出现角色、脾气和修改菜单可以验证亮签。若标为“这轮补抽”，说明此次未能确认首轮暗抽；仅凭菜单不能验证首轮加载。若只能检查文件，注明仍待宿主实测。
 
 ## 默认开局偏好（可直接复制）
@@ -69,6 +69,6 @@
 
 ## 版本与更新
 
-[更新日志](CHANGELOG.md) · [最新版本清单](plugins/persona-draw/plugin.json) · [最新安装包](dist/persona-draw-0.4.20.zip)。可把仓库链接发给安装用的 AI，说“比较已安装版本与 main 的插件清单，告诉我新增了什么”。
+[更新日志](CHANGELOG.md) · [最新版本清单](plugins/persona-draw/plugin.json) · [最新安装包](dist/persona-draw-0.4.21.zip)。可把仓库链接发给安装用的 AI，说“比较已安装版本与 main 的插件清单，告诉我新增了什么”。
 
-v0.4.20。源码在 [plugins/persona-draw](plugins/persona-draw)，发行 ZIP 与这里的技能内容一致。
+v0.4.21。源码在 [plugins/persona-draw](plugins/persona-draw)，发行 ZIP 与这里的技能内容一致。

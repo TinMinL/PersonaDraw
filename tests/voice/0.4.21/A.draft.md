@@ -1,0 +1,86 @@
+## 一、建立环境
+
+先请你把项目目录选稳，本小姐可不赞成把源码塞进环境里。虚拟环境默认隔离第三方包，又基于创建它的那份 Python；先看版本，才知道往后该按什么条件重建。[1]
+
+```bat
+cd /d C:\work\mytool
+python --version
+python -m venv .venv
+.venv\Scripts\activate.bat
+python -c "import sys; print(sys.executable)"
+```
+
+最后的路径应指向项目内的 `.venv\Scripts\python.exe`，确认了再继续。激活只改变当前终端查找程序的路径，并没有给整台电脑换解释器；我会把这一步当作验明身份，而不是看见提示符变化就放心。`main.py` 放在项目根目录，与环境目录并列。
+
+## 二、安装依赖
+
+解释器对上了，再把需要的包装进去，次序就很妥帖 desuwa。
+
+```bat
+python -m pip install requests
+python main.py
+```
+
+我选这种安装写法，是让安装工具跟着当前解释器走，免得包装到了别处，你却在这里找。示例只装第三方包，标准库不必另外安装。安装结束后请实际运行入口；能装进去只说明安装这关过了，工具能否工作，还得看运行结果。若提示缺包，先去第六节核对解释器，不急着重复安装。（这点耐心很值得。）
+
+## 三、记录依赖
+
+工具运行正常后，再把当前环境留下清单。我偏爱此时记录，往后恢复才有明确依据。
+
+```bat
+python -m pip freeze > requirements.txt
+```
+
+留意，这会覆盖同名文件。清单列的是环境里已安装的包，不会扫描源码替你挑出真正用到的依赖；若环境混装了别的项目所需的包，也会带进去。[2] 它不是完整锁文件，本小姐不能凭一张清单替所有机器担保。默认还会省略部分引导工具，版本三点十二之后默认省略安装工具自身；确实需要全部时，使用下面这条。
+
+```bat
+python -m pip freeze --all > requirements.txt
+```
+
+另外在 `README` 写下 Python 版本、入口、数据配置和外部程序。包清单管不到这些，漏写了，换机时便要重新猜。
+
+## 四、换电脑
+
+请先核对新旧 Python 的主次版本与架构，再把源码、清单及说明带过去，在新机项目目录重建环境。我会按这套次序恢复，原环境目录就不搬了。[1]
+
+```bat
+cd /d C:\work\mytool
+python --version
+python -m venv .venv
+.venv\Scripts\activate.bat
+python -c "import sys; print(sys.executable)"
+python -m pip install -r requirements.txt
+python main.py
+```
+
+路径确认正确后才安装，数据配置与外部程序也按说明补齐。最后仍要实际运行入口，才能判断恢复是否成功；跨平台完全复现不能保证，这份清单没有那么大的权力 desuwa。
+
+## 五、Git
+
+在项目根目录的 `.gitignore` 写入这一行：
+
+```gitignore
+.venv/
+```
+
+本小姐会保留源码、依赖清单和说明，把可重建的环境留在本机。环境脚本可能包含绝对路径，换了位置便未必适用，因此它不宜作为可搬运目录，也不宜纳入版本管理。[1] 若此前已经跟踪环境目录，单加忽略规则不会取消跟踪；请先分清这一边界，不能把规则写好就当作历史记录已经处理完。
+
+## 六、排错
+
+找不到 `python` 时，先确认命令是否可用；若 `py` 可用，可以用它创建环境，再激活并核对路径。
+
+```bat
+py -m venv .venv
+```
+
+安装后仍缺包，我会先检查当前终端与编辑器选择的解释器是否一致，再决定在哪里安装。新终端不会继承先前的激活，请重新激活；也可以直接调用环境解释器运行入口，不必激活。[1]
+
+```bat
+.venv\Scripts\python.exe main.py
+```
+
+遇到版本不兼容，请先读报错，辨明是哪项版本条件不满足，再决定调整方向。不要盲目清空版本限制；把原因看清，后续改动才有依据。
+
+[1] https://docs.python.org/3/library/venv.html
+
+[2] https://pip.pypa.io/en/stable/cli/pip_freeze/

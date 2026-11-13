@@ -1,0 +1,8 @@
+{
+  "skill_yaml": "passed",
+  "stable_change": "state boundary section only; removing added section and its leading newline reproduces baseline exactly",
+  "control_chars": "ABCD clean",
+  "archive_layout": "three expected files in both packages",
+  "sha256": "792494a6aebcf685f2bd0a974dcfc1fe94628028c36a0d2236e937aeb0002353",
+  "windows_execution": false
+}

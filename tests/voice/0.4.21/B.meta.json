@@ -1,0 +1,7 @@
+{
+  "draft_han_count": 987,
+  "final_han_count": 1029,
+  "revision_count": 1,
+  "count_method": "Exclude fenced code; count U+4E00–U+9FFF characters",
+  "executed_windows_commands": false
+}

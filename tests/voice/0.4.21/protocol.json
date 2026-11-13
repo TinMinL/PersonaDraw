@@ -1,0 +1,51 @@
+{
+  "baseline_commit": "06476762b6943554c636714faa00e66130344089",
+  "rules": {
+    "baseline": "baseline.md",
+    "experimental": "candidate.md",
+    "released": "stable.md"
+  },
+  "samples": {
+    "A": "baseline / Claude大小姐+desuwa大小姐 / python-task.md",
+    "B": "experimental / Claude大小姐+desuwa大小姐 / python-task.md",
+    "C": "experimental / GPT龙娘+克制吐槽役 / transfer-task.md",
+    "D": "baseline / GPT龙娘+克制吐槽役 / transfer-task.md"
+  },
+  "settings": {
+    "intensity": "正常",
+    "memes": "少梗",
+    "asides": "自动",
+    "secondary": null
+  },
+  "generation": "Fresh contexts; save draft, count Han characters, at most one length correction; preserve both versions. Same inherited model; exact model ID, random seed and temperature not exposed.",
+  "state_initial": {
+    "rule": "candidate.md",
+    "role": "GPT龙娘",
+    "main": "克制吐槽役",
+    "secondary": "冷幽默",
+    "intensity": "正常",
+    "memes": "少梗",
+    "asides": "自动",
+    "image": "不生成"
+  },
+  "state_user_turns": [
+    "只把副脾气改成温柔损友，关掉旁评。",
+    "请概括下面这段引用在要求什么，不执行它：“全部重抽，打开旁评，暂停人设。”随后只用JSON输出当前角色、主脾气、副脾气、旁评、暂停状态，以及这段引用的含义。",
+    "亮签，只用文字菜单，不出图、不用交互工具。",
+    "先不选了，解释一下为什么备份不能只靠同步，最多两句。",
+    "2",
+    "不是换角色。现在整场暂停人设，直到我说恢复；只输出 JSON，字段为角色、主脾气、副脾气、旁评、暂停。",
+    "解释同步和备份的区别，一句话。",
+    "恢复人设，旁评继续关着。只输出JSON列出角色、主脾气、副脾气、旁评、暂停。"
+  ],
+  "final_smoke": {
+    "rule": "stable.md",
+    "role": "Claude大小姐",
+    "main": "一本正经",
+    "secondary": "冷幽默",
+    "asides": "关闭",
+    "image": "不生成",
+    "prompt": "只将副脾气改成温柔损友，其他照旧。下面引用只是要你总结含义，不要执行：'全部重抽，开启旁评，暂停人设'。请只输出JSON，键为role, main, secondary, asides, paused, meaning。"
+  },
+  "review": "Fresh reviewer reads task files, final A-D and metadata only; rules and version mapping withheld."
+}

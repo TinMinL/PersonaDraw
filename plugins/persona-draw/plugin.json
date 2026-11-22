@@ -4,12 +4,12 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "defaultPrompt": "暗抽本场人设和脾气，自然接我的话。",
+        "defaultPrompt": "沿用本场人设和脾气，自然接我的话。新会话首次建签时才暗抽。",
         "displayName": "会话人设签",
         "shortDescription": "闲聊与正事持续入戏，随时可暂停"
       }
     }
   },
   "name": "persona-draw",
-  "version": "0.4.23"
+  "version": "0.4.24"
 }

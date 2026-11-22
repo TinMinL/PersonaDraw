@@ -2,21 +2,21 @@
 
 每个会话暗抽一位 AI 同人角色和一种脾气，平时直接聊天。亮签时也以第一人称直接接话，仅在引用、代说等语境使用引号。说“亮签”可查看和修改当前签。工作、代码讨论和严肃话题也默认持续融合角色与脾气；用户可随时暂停或限定文风。代码、公式等精确片段及指定文体的成果按任务要求呈现，周围解释继续保持角色口吻。
 
-## 把这句话连同仓库链接发给电脑上的 Codex
+## 把这句话发给要安装的智能体
 
-> 请从 https://github.com/TinMinL/PersonaDraw 安装会话人设签到我的个人 Codex。按 README 判断当前环境：能安装就执行；若还需要我操作，请告诉我具体步骤。默认开启新会话暗抽；已有偏好和项目约定请保留。安装结束后告诉我怎样验证亮签。
+> 请从 https://github.com/TinMinL/PersonaDraw 安装会话人设签。识别当前宿主，按 README 选择对应入口。DSH、Antigravity 等本地智能体默认装在我当前工作的项目，Codex 按我的安装范围设置。启用默认开局暗抽，同一会话沿用首签，保留已有项目规则和个人修改。完成后告诉我实际安装位置，以及怎样分别验证手动亮签和普通开场。
 
 ### 给执行安装的 AI
 
-1. 先辨认目标：本机 Codex、云端工作环境或普通 ChatGPT。要装到用户电脑时，须在有本机写权限的会话执行；云端目录只影响对应云端环境。
+1. 先辨认目标：本机智能体、云端工作环境或普通 ChatGPT。DSH、AGY、Claude Code、Gemini CLI、Hermes 和通用适配见下方「其他智能体安装」。要装到用户电脑时，须在有本机写权限的会话执行；云端目录只影响对应云端环境。
 2. Codex 优先用宿主提供的市场功能添加本仓库并安装 `persona-draw`。市场清单位于 `.agents/plugins/marketplace.json`。也可将 `plugins/persona-draw/skills/persona-draw/` 安装到宿主支持的个人 skills 目录；只需当前项目时用项目内的 `.agents/skills/persona-draw/`。同名旧版本先检查差异，保留个人修改。
 3. 用户要求默认暗抽、且目标偏好文件可写时，将下节文字追加到适用范围的 Codex AGENTS.md（个人跨项目用用户级文件，项目专用才用项目文件），没有才创建，已有等效指令则跳过；若用户已有自己的暗抽写法，只补缺失的正文口吻要求，保留其余偏好。不覆盖其他设置。只想手动抽签时跳过此步。若只能指导用户设置，说明目标位置和要粘贴的原文。
-4. 普通 ChatGPT 在有创建插件权限时下载[插件 ZIP](dist/persona-draw-0.4.23.zip)，请 ChatGPT 从附件创建自己的私人插件并启用。在“设置 → 个性化 → 自定义指令”追加下节文字。个人导入是独立副本。
+4. 普通 ChatGPT 在有创建插件权限时下载[插件 ZIP](dist/persona-draw-0.4.24.zip)，请 ChatGPT 从附件创建自己的私人插件并启用。在“设置 → 个性化 → 自定义指令”追加下节文字。个人导入是独立副本。
 5. 核对安装版本；在**新会话**直接发普通消息，再问“这次你是谁”。出现角色、脾气和修改菜单可以验证亮签。再发一条普通追问并重复亮签，检查首轮角色与后来的签面一致。缺项应明示；仅凭菜单不能验证首轮加载。若只能检查文件，注明仍待宿主实测。
 
 ## 默认开局偏好（可直接复制）
 
-新会话默认用会话人设签，角色和主脾气独立暗抽，本场沿用，按我指定或重抽时再换。同一会话只在首次建签时暗抽；每次回话直接沿用已定角色和脾气，直接带进这轮能自由措辞的内容；哪怕我只说“继续”也照常接话，不用逐轮报签。闲聊和正事都让她直接跟我说；查完资料、列完表，接着用她的脾气讲我该看哪项、为什么。中段也让她用自己的话解读，顺口带一点本场自称或口癖。代码、引用和交付物按要求写；只要成品或暂停人设时按我说的办。插件未加载时也沿用这个偏好。亮签、验牌默认用文字；只用能核对的同版图，不搜通用头像。
+新会话第一轮加载 persona-draw（会话人设签），角色和主脾气独立暗抽，本场沿用，按我指定或重抽时再换。同一会话只在首次建签时暗抽；每次回话直接沿用已定角色和脾气，直接带进这轮能自由措辞的内容；哪怕我只说“继续”也照常接话，不用逐轮报签。闲聊和正事都让她直接跟我说；查完资料、列完表，接着用她的脾气讲我该看哪项、为什么。中段也让她用自己的话解读，顺口带一点本场自称或口癖。代码、引用和交付物按要求写；只要成品或暂停人设时按我说的办。插件未加载时也沿用这个偏好。亮签、验牌默认用文字；只用能核对的同版图，不搜通用头像。
 
 ## 人设与任务的边界
 
@@ -50,13 +50,35 @@
 
 四位 AI 同人与 28 种主脾气独立抽取；仍可手动混搭。试试“指定 Gemini + desuwa 大小姐”“角色不换，切到 6657 弹幕串子”或“关掉括号旁评，分隔保留”。旧版自定义指令如明确写了三选一，可改用上面的新版偏好。
 
-## DeepSeek Harness 与 Hermes Agent
+## 其他智能体安装
 
-两个宿主都使用同一份 [SKILL.md](plugins/persona-draw/skills/persona-draw/SKILL.md)，无需 ChatGPT 插件 ZIP。UI 取决于客户端；普通终端用编号菜单。
+[下载通用技能包](dist/persona-draw-skill-0.4.24.zip)。包内直接包含 `persona-draw/SKILL.md`。手动安装时先解压到临时目录，再把整个 `persona-draw` 文件夹放入技能目录。已有同名签时先比对，保留个人修改。普通终端亮签使用文字和编号选项。
 
-- **Hermes Agent（Nous Research）**：执行 `hermes skills install https://raw.githubusercontent.com/TinMinL/PersonaDraw/main/plugins/persona-draw/skills/persona-draw/SKILL.md`，新会话输入 `/persona-draw 亮签`。可用 `hermes skills list` 查安装状态。[官方指南](https://hermes-agent.nousresearch.com/docs/guides/work-with-skills/)
-- **DeepSeek Harness**：在实际运行 dsh 的目标项目中，将单文件保存为 `.dsh/skills/persona-draw/SKILL.md`。启动新会话，请它加载 persona-draw 并亮签。个人范围可放在配置的 dsh home 下的 `skills/persona-draw/SKILL.md`。需要启用本地技能 provider。[官方发现规则](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/skills.md)
-- 想要开局暗抽，可把本页的偏好追加到宿主实际加载的用户/项目指令中。技能出现于列表不等于每个新会话都会加载全文。
+| 宿主 | 项目技能目录或原生安装入口 | 在宿主中验证 |
+| --- | --- | --- |
+| DeepSeek Harness（dsh） | 项目根的 `.agents/skills/`。个人安装可用当前配置的 `<dshHome>/skills/`。需要启用本地文件技能发现和加载工具 | 新会话输入 `/persona-draw 亮签`，检查实际技能来源。旧版项目的 `.dsh/skills/` 优先级更高 |
+| Google Antigravity（agy） | 项目根的 `.agents/skills/`，CLI、App、IDE 均支持。个人安装可用 `~/.gemini/config/skills/` | CLI 内输入 `/skills reload`，再输入 `/persona-draw 亮签`。IDE 可在 Customizations 检查 |
+| Gemini CLI | 项目根的 `.agents/skills/`，也支持 `.gemini/skills/` | 使用 `/skills list`，再请它加载 persona-draw 并亮签 |
+| Claude Code | 项目根的 `.claude/skills/` | 在该项目输入 `/persona-draw 亮签` |
+| Hermes Agent | `hermes skills install https://raw.githubusercontent.com/TinMinL/PersonaDraw/main/plugins/persona-draw/skills/persona-draw/SKILL.md` | `hermes skills list`，再在新会话输入 `/persona-draw 亮签` |
+| 其他智能体 | 支持 Agent Skills 的宿主按该宿主指定的目录放置通用包。如果只支持提示词，可将技能正文加入它的会话指令 | 分别验证首轮加载、同线程续签和纯代码输出；仅支持单次提示词的宿主需要自行传递会话历史 |
+
+从源码安装可在本仓库根目录运行以下命令，将最后一个参数换成实际目标项目。Windows 可用 `py -3` 代替 `python3`，也可直接使用上面的通用包。第二个命令在同一项目应报告已安装。
+
+```sh
+python3 scripts/install_skill.py dsh "/path/to/your/project"
+python3 scripts/install_skill.py agy "/path/to/your/project"
+```
+
+支持的项目安装参数还有 `gemini`、`claude` 和 `codex`。DSH 会从目标目录向上找最近的 Git 根，其他宿主使用传入的项目根。脚本只写技能文件。同名内容不同会列出路径，供你比较后合并；DSH 旧目录中有同名候选时也会提示。DSH 若禁用了默认扫描目录，请把通用包放入已配置的技能目录。
+
+**默认开场**需要把上方「默认开局偏好」合并进宿主实际读取的指令。DSH 和 AGY 在同一项目可以共享一份根目录 `AGENTS.md`；Claude Code 用 `CLAUDE.md`，Gemini CLI 默认用 `GEMINI.md`。仅保存通用偏好，抽到的角色和脾气留在各自的对话里。只想手动亮签时，装好技能即可。
+
+**实际验收**分两场进行。第一场手动亮签，确认宿主能发现并加载技能。第二场用普通问题开局，再问“亮签”，记下角色和主脾气。接着发“继续”、换一个话题，最后再亮签，两次签面应一致，中段判断也应听得出同一位角色。另发“只给 JSON”，检查能否直接解析。新开会话允许自然抽中相同组合，不能用是否撞签判断成败。
+
+0.4.24 已运行[项目安装回归](tests/installer/test_install.py)，并用 Codex CLI 的技能目录接口核对了实际加载路径。DSH、AGY、Gemini CLI、Claude Code 和 Hermes 的发现规则已查阅，本轮未在这些客户端运行模型会话。
+
+宿主说明见 [DSH 文件发现](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/skill/skill-filesystem)、[DSH 技能调用](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/skill/tool-skill)、[Antigravity 技能](https://antigravity.google/docs/skills)、[Antigravity 项目规则](https://antigravity.google/docs/rules/)、[Claude Code](https://code.claude.com/docs/en/skills)、[Gemini CLI](https://geminicli.com/docs/cli/skills/) 和 [Hermes](https://hermes-agent.nousresearch.com/docs/guides/work-with-skills/)。
 
 ## 亮签与角色形象
 
@@ -69,6 +91,6 @@
 
 ## 版本与更新
 
-[更新日志](CHANGELOG.md) · [最新版本清单](plugins/persona-draw/plugin.json) · [最新安装包](dist/persona-draw-0.4.23.zip)。可把仓库链接发给安装用的 AI，说“比较已安装版本与 main 的插件清单，告诉我新增了什么”。
+[更新日志](CHANGELOG.md) · [最新版本清单](plugins/persona-draw/plugin.json) · [最新安装包](dist/persona-draw-0.4.24.zip)。可把仓库链接发给安装用的 AI，说“比较已安装版本与 main 的插件清单，告诉我新增了什么”。
 
-v0.4.23。源码在 [plugins/persona-draw](plugins/persona-draw)，发行 ZIP 与这里的技能内容一致。
+v0.4.24。源码在 [plugins/persona-draw](plugins/persona-draw)，发行 ZIP 与这里的技能内容一致。
